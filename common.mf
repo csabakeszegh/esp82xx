@@ -9,11 +9,11 @@
 ###############################################################################
 
 GCC_FOLDER = $(ESP_ROOT)/xtensa-lx106-elf
-ESPTOOL_PY = $(ESP_ROOT)/esptool/esptool.py
+ESPTOOL_PY = $(HOME)/work/esptool/esptool.py
 SDK       ?= $(PWD)/esp82xx/toolchain/esp_nonos_sdk
 
 XTLIB        = $(SDK)/lib
-XTGCCLIB     = $(GCC_FOLDER)/lib/gcc/xtensa-lx106-elf/$(ESP_GCC_VERS)/libgcc.a
+XTGCCLIB     = $(XTLIB)/libgcc.a
 FOLDERPREFIX = $(GCC_FOLDER)/bin
 PREFIX       = $(FOLDERPREFIX)/xtensa-lx106-elf-
 CC           = $(PREFIX)gcc

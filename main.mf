@@ -178,7 +178,7 @@ Makefile user.cfg web/page/index.html web/page/example.js :
 project : Makefile user.cfg web/page/index.html web/page/example.js
 	ln -s $(patsubst %,../../%,$(wildcard esp82xx/web/page/jquery-*)) ../../esp82xx/web/page/menuinterface.js web/page/ 2>/dev/null; \
 	ln -s $(patsubst %,../%,$(wildcard esp82xx/web/*)) web/ 2>/dev/null; \
-	cp -rn esp82xx/fwsrc/user/ .;
+	cp -rn esp82xx/fwsrc/user .;
 
 ifeq ($(SDK),$(PWD)/esp82xx/toolchain/esp_nonos_sdk)
 $(SDK_DEP) :
